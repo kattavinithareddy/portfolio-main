@@ -1,7 +1,12 @@
 /* appling google font over the website  */
-body{
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hides any overflow on the x-axis */
 }
 /* styling menu icon */
 .nav-menu{
