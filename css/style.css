@@ -1,22 +1,46 @@
 /* appling google font over the website  */
 
 * {
-    box-sizing: border-box;
-}
-
-body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100vw !important;
+    width: auto;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Body styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     max-width: 100vw;
+    /* Prevent horizontal scrolling */
     overflow-x: hidden;
+    /* Hide any accidental overflow */
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    /* Hides any overflow on the x-axis */
+
+/* Container styles */
+
+.container {
+    max-width: 100%
+    /* Take full width of the viewport */
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
 }
 
 
@@ -89,6 +113,13 @@ body {
     line-height: 4rem;
 }
 
+@media (max-width: 768px) {
+    .home h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
 .c-orange {
     color: #6f34fe;
     font-weight: 700;
@@ -141,8 +172,24 @@ body {
 
 /* adding animation to home section image  */
 
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .home img {
-    animation: floatimg 4s ease-in-out infinite;
+    width: 100%;
+    max-width: 400px;
+    /* Prevents it from getting too big */
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 @keyframes floatimg {
@@ -499,4 +546,28 @@ footer .link-group a:hover {
     background-color: #fca61f;
     color: #fff;
     animation: pulse 3s infinite;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home h2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .c-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 10px;
+    }
 }
